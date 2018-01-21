@@ -1,0 +1,389 @@
+/* Setup */
+
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Global CSS */
+
+.wrapper {
+	margin: 10px auto;
+	max-width: 1280px;
+	padding: 5px 10px;
+}
+
+html {
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* Account Styles */
+
+.account {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-top: -32px;
+
+}
+
+.account ul {
+	list-style-type: none;
+	display: flex;
+}
+
+.account li {
+	color: white;
+	background: black;
+	margin: 5px;
+	padding: 5px;
+	font-size: 1rem;
+}
+
+.account-link {
+	color: #2F7DA6;
+}
+
+/* Nav Styles*/
+
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: -10px;
+}
+
+/* Logo Styles */
+
+.logo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.logo h1 {
+	font-family: 'Questrial', sans-serif;
+	font-size: 3vmin;
+	padding-left: 20px;
+	color: white;
+	letter-spacing: 1.5px;
+	text-shadow: 1px 1px 3px black;
+}
+
+.logo img {
+	width: 12vmin;
+}
+
+/* Navigation Links Styles */
+
+.fa {
+	visibility: hidden;
+	cursor: pointer;
+	color: white;
+}
+
+ul.navigation {
+	list-style-type: none;
+	display: flex;
+	padding-left: 0;
+	margin-bottom: 40px;
+}
+
+ul.navigation li {
+	padding-left: 20px;
+}
+
+ul.navigation li:after {
+	content: "/";
+	font-size: 2rem;
+	padding-left: 20px;
+	color: lightgrey;
+}
+
+ul.navigation a {
+	text-decoration: none;
+	color: white;
+	transition: ease .3s;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+ul.navigation a:hover {
+	color: #66cc66;
+}
+
+/* Hero Content Styles */
+
+.hero-content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-size: cover;
+	justify-content: space-around;
+}
+
+.hero-text {
+	padding: 5px 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background: rgba(255,255,255,.8);
+	margin-top: 20vh;
+	margin-bottom: 6vh;
+	max-width: 700px;
+}
+
+.read-more {
+	text-decoration: none;
+	color: #2F7DA6;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+h1 {
+	color: #2F7DA6;
+	font-size: 2.5rem;
+}
+
+p {
+	font-size: 1.2rem;
+}
+
+h5 {
+	font-size: 1.4rem;
+}
+
+.hero-image {
+	overflow: hidden;
+	z-index: -100;
+	position: absolute;
+	top: 0;
+	height: 100vh;
+}
+
+video {
+	width: 100vw;
+	height: auto;
+}
+/* News Styles */
+
+.news {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.news-block h1 {
+	color: white;
+}
+
+.news-block {
+	width: calc(33.3% - 10px);
+	min-width: 280px;
+	height: 320px;
+	margin: 5px;
+	background: #151515;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: flex;
+	flex-direction: column;
+	transition: .3s ease;
+}
+
+.news-block:hover {
+	background: #66cc66;
+	color: white;
+}
+
+.news-block figcaption {
+	background: white;
+}
+
+/* About Section Styles */
+
+.about {
+	background: linear-gradient(rgba(0,0,0,0.7), rgba(30,30,30,0.6)),url(https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&w=2250&q=80);
+	background-size: cover;
+	padding: 10px 20px;
+}
+
+.about-text {
+	max-width: 900px;
+	color: white;
+}
+
+.about-text p {
+	font-size: 1.5rem;
+}
+
+h2 {
+	font-family: 'Questrial', sans-serif;
+	font-size: 9vmin;
+}
+
+/* Main Content Styles */
+
+
+h4 {
+	color: #2F7DA6;
+	font-size: 1.3rem;
+}
+
+.box-art {
+	width: 180px;
+}
+
+.film-box {
+	background: white;
+	width: 195px;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+	margin: 5px 5px;
+	padding: 0px 2px;
+}
+
+.new-releases {
+	background: #151515;
+	padding: 20px 20px;
+}
+
+.heading {
+	font-size: 4.5rem;
+	margin-bottom: -95px;
+	color: #151515;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	text-transform: uppercase;
+	font-family: 'Questrial', sans-serif;
+	font-weight: 700;
+}
+
+.film-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	padding: 50px 0px;
+}
+
+/*My Criterion Styles*/
+.my-criterion {
+	border: 20px solid #66cc66;
+	padding: 10%;
+}
+
+.my-criterion h2 {
+	color: #66cc66;
+	font-size: 2.5rem;
+	font-family: 'Questrial', sans-serif;
+}
+
+/*Button Class*/
+
+button {
+	background: #66cc66;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	font-size: 1.5rem;
+	border-radius: 10px;
+	border: none;
+	font-family: 'Questrial', sans-serif;
+	transition: .3s ease;
+}
+
+button:hover {
+	background: #2F7DA6;
+}
+
+.view-all {
+	background: white;
+	color: black;
+	padding: 10px 20px;
+	text-align: center;
+	font-size: 2rem;
+	border-radius: 0;
+	border: none;
+	font-family: 'Questrial', sans-serif;
+	transition: .3s ease;
+	float: right;
+	margin-top: -15px;
+}
+
+.view-all:hover {
+	background: white;
+	padding: 10px 20px;
+	text-align: center;
+	border-radius: 0;
+	border: none;
+	font-family: 'Questrial', sans-serif;
+	float: right;
+	text-decoration: underline;
+}
+
+
+/*Media Queries */
+@media (max-width: 1080px) {
+	ul.navigation {
+		visibility: hidden;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(0,0,0,0.8);
+		flex-flow: column wrap;
+		text-align: center;
+		justify-content: space-around;
+		padding-left: 0;
+	}
+
+	ul.navigation.open {
+		visibility: visible;
+	}
+
+	ul.navigation li {
+		padding: 25px 0;
+		font-size: 2rem;
+	}
+
+	.fa {
+		visibility: visible;
+	}
+
+	ul.navigation a {
+		color: white;
+	}
+}
+
+@media (max-width: 900px) {
+	.news-block {
+		width: 100%;
+		min-width: 320px;
+		max-height: 250px;
+		margin: 5px;
+		background: #151515;
+		color: white;
+		padding-left: 20px;
+		padding-right: 20px;
+		display: flex;
+		flex-direction: column;
+		transition: .3s ease;
+	}
+
+	.news-block h1 {
+		color: white;
+		font-size: 1.8rem;
+	}
+}
