@@ -54,6 +54,7 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	margin-top: -10px;
+	padding: 0px 20px;
 }
 
 /* Logo Styles */
@@ -66,7 +67,7 @@ nav {
 
 .logo h1 {
 	font-family: 'Questrial', sans-serif;
-	font-size: 3vmin;
+	font-size: 2.5vmin;
 	padding-left: 20px;
 	color: white;
 	letter-spacing: 1.5px;
@@ -74,7 +75,7 @@ nav {
 }
 
 .logo img {
-	width: 12vmin;
+	width: 8vmin;
 }
 
 /* Navigation Links Styles */
@@ -103,6 +104,10 @@ ul.navigation li:after {
 	color: lightgrey;
 }
 
+ul.navigation li:last-child:after {
+	content:'';
+}
+
 ul.navigation a {
 	text-decoration: none;
 	color: white;
@@ -118,26 +123,21 @@ ul.navigation a:hover {
 /* Hero Content Styles */
 
 .hero-content {
+	height: 80vh;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	background-size: cover;
-	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .hero-text {
-	padding: 5px 20px;
-	margin-left: 10px;
-	margin-right: 10px;
-	background: rgba(255,255,255,.8);
-	margin-top: 20vh;
-	margin-bottom: 6vh;
-	max-width: 700px;
+	max-width: 800px;
+	color: white;
 }
 
 .read-more {
 	text-decoration: none;
-	color: #2F7DA6;
+	color: white;
 	font-size: 1.5rem;
 	font-weight: 700;
 }
@@ -156,17 +156,26 @@ h5 {
 }
 
 .hero-image {
-	overflow: hidden;
 	z-index: -100;
 	position: absolute;
 	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	height: 100vh;
+	overflow: hidden;
+	background: url(rashomon.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-video {
-	width: 100vw;
-	height: auto;
+.spotlight-title {
+	font-family: 'Caveat Brush', cursive;
+	font-size: 15vmin;
+	color: red;
 }
+
+
 /* News Styles */
 
 .news {
@@ -183,7 +192,7 @@ video {
 .news-block {
 	width: calc(33.3% - 10px);
 	min-width: 280px;
-	height: 320px;
+	height: 350px;
 	margin: 5px;
 	background: #151515;
 	color: white;
@@ -251,17 +260,15 @@ h4 {
 }
 
 .new-releases {
-	background: #151515;
+	background: #EBEBEB;
 	padding: 20px 20px;
 }
 
 .heading {
 	font-size: 4.5rem;
-	margin-bottom: -95px;
+	margin-bottom: -80px;
+	letter-spacing: 2px;
 	color: #151515;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 	text-transform: uppercase;
 	font-family: 'Questrial', sans-serif;
 	font-weight: 700;
@@ -277,14 +284,41 @@ h4 {
 
 /*My Criterion Styles*/
 .my-criterion {
-	border: 20px solid #66cc66;
-	padding: 10%;
+	border: 10px solid #66cc66;
+	padding: 5%;
 }
 
 .my-criterion h2 {
 	color: #66cc66;
 	font-size: 2.5rem;
 	font-family: 'Questrial', sans-serif;
+}
+
+.user-stories {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.user-story {
+	background: #EBEBEB;
+	min-width: 200px;
+	width: calc(33.3% - 10px);
+	padding: 20px;
+	margin: 5px 5px;
+	border-radius: 2%;
+}
+
+.profile-img {
+	width: 80px;
+	border-radius: 50%;
+}
+
+.user-profile {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 /*Button Class*/
@@ -330,11 +364,44 @@ button:hover {
 	text-decoration: underline;
 }
 
+/* Footer Content Styles */
+
+footer {
+	background: black;
+	padding: 50px 0px;
+	margin-top: 50px;
+}
+
+.logo-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.logo-footer img {
+	width: 50px;
+	height: 50px;
+}
+
+.footer-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.footer-links {
+	list-style-type: none;
+	padding-left: 0px;
+	width: 120px;
+	color: white;
+}
+
 
 /*Media Queries */
 @media (max-width: 1080px) {
 	ul.navigation {
-		visibility: hidden;
+		display: none;
 		position: fixed;
 		top: 0;
 		bottom: 0;
@@ -347,15 +414,20 @@ button:hover {
 		text-align: center;
 		justify-content: space-around;
 		padding-left: 0;
+		margin-top: 0;
 	}
 
 	ul.navigation.open {
-		visibility: visible;
+		display: flex;
 	}
 
 	ul.navigation li {
 		padding: 25px 0;
 		font-size: 2rem;
+	}
+
+	ul.navigation li:after {
+		content: '';
 	}
 
 	.fa {
@@ -379,11 +451,25 @@ button:hover {
 		padding-right: 20px;
 		display: flex;
 		flex-direction: column;
-		transition: .3s ease;
 	}
 
 	.news-block h1 {
 		color: white;
 		font-size: 1.8rem;
+	}
+}
+
+@media (max-width: 900px) {
+	.user-stories {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.user-story {
+		background: #EBEBEB;
+		width: 100%;
+		padding: 20px;
+		margin: 5px 5px;
+		border-radius: 2%;
 	}
 }
